@@ -1,0 +1,333 @@
+:root {
+  --clr-accent-600: #382AE1;
+  --clr-accent-500: #1F2E55;
+  --clr-accent-400: #766CF1;
+  --clr-accent-300: #717FA6;
+  --clr-accent-200: #E0E8FF;
+  --clr-accent-150: #F7F9FF;
+  --clr-accent-100: #fff;
+  
+  
+
+  --fw-regular: 500;
+  --fw-semi-bold: 700;  
+  --fw-bold: 900;  
+
+  --ff-primary: 'Red Hat Display', sans-serif;
+  --ff-body: var(--ff-primary);
+
+  --fs-100: 0.875rem;
+  --fs-200: 0.938rem;
+  --fs-300: 1rem;
+  --fs-400: 1.75rem;
+
+  --fs-header: var(--fs-400);
+  --fs-body:var(--fs-300);
+  --fs-button: var(--fs-200);
+  --fs-cancel: var(--fs-200);
+  --fs-change: var(--fs-100);
+  
+  
+  --size-100: 0.938rem; /* 15px*/
+  --size-200: 1.063rem; /* 17px*/
+  --size-300: 1.25rem; /* 20px*/
+  --size-400: 1.5rem; /* 24px*/
+  --size-500: 1.563rem; /* 25px*/
+  --size-600:2rem; /* 32px*/
+  --size-700: 2.813rem; /* 45px*/
+  --size-800: 3rem; /* 48px*/
+  --size-900:3.563rem; /* 57px*/
+  --size-1000: 6.375rem; /* 102px*/
+  --size-2000: 13.75rem; /* 220px */
+  --size-3000:22.125; /* 354px*/
+  --size-4000: 43.563rem; /*697.008px*/
+  --size-5000: 28.125rem; /*450px*/
+
+}
+/* CSS RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+  outline: none;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+
+html,
+body {
+  height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture,
+svg {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+/* General styling */
+body {
+  background-color: var(--clr-accent-200);
+  font-size: var(--fs-body);
+  font-family: var(--ff-body);
+}
+
+.main {
+  position: relative;
+  border-radius: 20px 20px 0 0;
+  height: 100vh;
+  width: 100%;
+}
+
+
+@media (min-width: 23.5em){
+  .svg-bg {
+    display: block;
+  }
+
+  .svg-bg[data-type="mobile"] {
+    display: none;
+  }
+}
+
+@media (max-width: 23.5em){
+  .svg-bg {
+    display: none;
+  }
+  
+  .svg-bg[data-type="mobile"] {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    /* width: 100%;
+    height: 100%; */
+    z-index: 0;
+  }
+}
+
+.container {
+  position: relative;
+  z-index: 1;
+  margin: 4.438em var(--size-400) 4.438em;
+  border-radius: 20px 20px 0 0;
+  
+}
+
+.svg-hero {
+  border-radius: 20px 20px 0 0;
+}
+
+.header {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.description-text {
+  text-align: center;
+  line-height: var(--size-500);
+  margin: var(--size-200) 0 var(--size-400);
+}
+
+.plan {
+  border-radius: 11px;
+  margin-bottom: var(--size-400);
+}
+
+.plan__container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.music-price {
+  display: flex;
+  gap: var(--size-300);
+}
+
+.music-svg {
+  object-fit: cover;
+}
+.plan-price {
+
+}
+
+.annual-plan {
+
+}
+
+.price {
+
+}
+
+.change-link {
+
+}
+
+.button {
+  border: none;
+  border-radius: 11px;
+  box-shadow: 0px 20px 20px 0px rgba(56, 42, 225, 0.19);
+  margin-bottom: var(--size-400);
+
+}
+
+
+.cancel {
+  text-align: center;
+  margin-bottom: var(--size-600);
+}
+
+/* Utility classes */
+
+.text-accent-600 {
+  color: var(--clr-accent-600);
+}
+.text-accent-500 {
+  color: var(--clr-accent-500);
+}
+.text-accent-400 {
+  color: var(--clr-accent-400);
+}
+.text-accent-300 {
+  color: var(--clr-accent-300);
+}
+.text-accent-200 {
+  color: var(--clr-accent-200);
+}
+.text-accent-100 {
+  color: var(--clr-accent-100);
+}
+
+.bg-accent-600 {
+  background-color: var(--clr-accent-600);
+}
+.bg-accent-500 {
+  background-color: var(--clr-accent-500);
+}
+.bg-accent-400 {
+  background-color: var(--clr-accent-400);
+}
+.bg-accent-300 {
+  background-color: var(--clr-accent-300);
+}
+.bg-accent-200 {
+  background-color: var(--clr-accent-200);
+}
+.bg-accent-150 {
+  background-color: var(--clr-accent-150);
+}
+.bg-accent-100 {
+  background-color: var(--clr-accent-100);
+}
+
+.fw-bold {
+  font-weight: var(--fw-bold);
+}
+
+.fw-semi-bold {
+  font-weight: var(--fw-semi-bold);
+}
+
+.fw-regular {
+  font-weight: var(--fw-regular);
+}
+
+.fs-header {
+  font-size: var(--fs-header);
+}
+
+.fs-button {
+  font-size: var(--fs-button);
+}
+.fs-100 {
+  font-size: var(--fs-100);
+}
+
+.fs-200 {
+  font-size: var(--fs-200);
+}
+.fs-300 {
+  font-size: var(--fs-300);
+}
+.fs-400 {
+  font-size: var(--fs-400);
+}
+
+.padding-block-500 {
+  padding-block: var(--size-500);
+}
+
+.padding-block-100 {
+  padding-block: var(--size-100);
+}
+
+.padding-inline-800 {
+  padding-inline: var(--size-800);
+}
+
+.padding-inline-400 {
+  padding-inline: var(--size-400);
+}
+.padding-inline-1000 {
+  padding-inline: var(--size-1000);
+}
+
