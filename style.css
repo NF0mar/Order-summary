@@ -148,6 +148,10 @@ body {
   .container {
     width: var(--size-5000);
   }
+
+  .description-text {
+    padding: 0 2rem;
+  }
 }
 
 .svg-bg[data-type="mobile"] {
@@ -178,7 +182,7 @@ body {
   text-align: center;
   line-height: var(--size-500);
   margin: var(--size-200) 0 var(--size-400);
-  padding: 0 2rem;
+  
   text-align: center;
 }
 
